@@ -152,6 +152,26 @@ class LinearRegression:
         score = np.sum((y_pred - y)**2) / len(y)
         return score
     
+    def accuracy(self, X, y, metric="mse"):
+        """
+        Calculate the accuracy of the model predictions.
+
+        Parameters:
+        - X (array-like): The input features.
+        - y (array-like): The target values.
+        - metric (str): The metric to use for accuracy calculation. Default is "mse".
+
+        Returns:
+        - accuracy (float): The accuracy of the model predictions.
+        """
+        if metric == "mse":
+            accuracy = self.score(X, y)
+        elif metric == "r2":
+            accuracy = 1 - (self.score(X, y) / np.var(y))
+        else:
+            raise ValueError(f"Invalid metric: {metric}")
+        return accuracy
+    
     def __repr__(self):
         return f"LinearRegression(learning_rate={self.alpha}, n_iters={self.n_iters})"
     
