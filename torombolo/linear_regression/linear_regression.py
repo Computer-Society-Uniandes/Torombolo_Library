@@ -21,6 +21,7 @@ class LinearRegression:
         self.n_iters = n_iters
         self.slope_ = 0
         self.intercept_ = 0
+        self.costs = []
 
     def fit(self, X, y):
         """
@@ -113,8 +114,14 @@ class LinearRegression:
         - b_optimal (float): The optimal value of the y-intercept parameter.
         """
         for _ in range(self.n_iters):
-           self.slope_, self.intercept_ = self._step_gradient(X, y,self.slope_, self.intercept_)
+            self.slope_, self.intercept_ = self._step_gradient(X, y,self.slope_, self.intercept_)
+            self.costs.append(self.score(X,y))
 
+            # if _ % 20 == 0:
+            #     print(f"Cost at iteration {_}: {self.costs[_]}")
+            # if _ > 0 and self.costs[_] > self.costs[_-1]:
+            #     break
+            
         return self.slope_, self.intercept_
     
     def predict(self, X):
