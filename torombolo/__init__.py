@@ -1,1 +1,1 @@
-from .perceptron import Perceptron
+from .perceptron import Perceptron, AdalineSGD
