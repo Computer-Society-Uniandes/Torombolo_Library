@@ -1,3 +1,4 @@
+# Author: Erik García (Erik172)
 import numpy as np
 
 class LinearRegression:
