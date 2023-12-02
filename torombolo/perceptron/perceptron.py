@@ -20,6 +20,7 @@ class Perceptron:
     - brute_predict(X): Predice los valores de salida sin procesar para la entrada dada.
     - score(X, y): Calcula la precisión del Perceptron en la entrada y etiquetas dadas.
     - accuracy(X, y, metric='accuracy'): Calcula la precisión, precisión, recuperación o puntuación F1 del Perceptron.
+    - __repr__(): Devuelve una representación de cadena del Perceptron.
     - __str__(): Devuelve una representación de cadena del Perceptron.
     """
 
@@ -116,7 +117,9 @@ class Perceptron:
             return 2 * tp / (2 * tp + fp + fn)
         else:
             raise ValueError('Metric not supported. Supported metrics: accuracy, precision, recall, f1')
-        
+    
+    def __repr__(self):
+        return f'Perceptron(learning_rate={self.learning_rate}, n_iter={self.n_iter})'
     
     def __str__(self):
         """
