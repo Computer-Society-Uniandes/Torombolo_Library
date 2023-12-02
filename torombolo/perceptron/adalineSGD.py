@@ -121,6 +121,13 @@ class AdalineSGD:
         return X
     
     def predict(self, X):
-        """Return class label after unit step"""
+        """Return class label after unit step.
+
+        Parameters:
+        X (array-like): Input samples.
+
+        Returns:
+        array-like: Predicted class labels.
+        """
         return np.where(self.activation(self.net_input(X))
-                        >= 0.5, 1, 0)
+                >= 0.5, 1, 0)
