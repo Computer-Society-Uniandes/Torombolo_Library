@@ -1,6 +1,26 @@
 import numpy as np
 
 class Perceptron:
+    """
+    Un clasificador Perceptron.
+
+    Parámetros:
+    - learning_rate (float): La tasa de aprendizaje para el algoritmo Perceptron. El valor predeterminado es 0.01.
+    - n_iter (int): El número de iteraciones para entrenar el Perceptron. El valor predeterminado es 100.
+
+    Atributos:
+    - w_ (ndarray): Los pesos del Perceptron después de ajustar los datos de entrenamiento.
+    - b_ (ndarray): El término de sesgo del Perceptron después de ajustar los datos de entrenamiento.
+    - errors_ (list): El número de clasificaciones incorrectas en cada iteración durante el entrenamiento.
+
+    Métodos:
+    - fit(X, y): Ajusta el Perceptron a los datos de entrenamiento.
+    - activation(X): Calcula la función de activación para la entrada dada.
+    - predict(X): Predice las etiquetas de clase para la entrada dada.
+    - brute_predict(X): Predice los valores de salida sin procesar para la entrada dada.
+    - score(X, y): Calcula la precisión del Perceptron en la entrada y etiquetas dadas.
+    """
+
     def __init__(self, learning_rate=0.01, n_iter=100):
         self.learning_rate = learning_rate
         self.n_iter = n_iter
