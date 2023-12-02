@@ -41,7 +41,7 @@ En resumen, el perceptrón es un bloque de construcción fundamental en el campo
 
 # Adaline
 
-![Alt text](adaline.png)
+![Alt text](image.png)
 
 El Adaline (Adaptive Linear Neuron) es un algoritmo de aprendizaje y una arquitectura de red neuronal artificial temprana que tiene aplicaciones en problemas de clasificación y regresión. Fue desarrollado como una mejora con respecto al perceptrón original.
 
