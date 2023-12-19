@@ -14,7 +14,7 @@ pip install torombolo
 
 Torombolo ofrece una colección de algoritmos de machine learning, incluyendo:
 
-- Regresión lineal
+- [Regresión lineal](torombolo/linear_regression/README.md)
 - Regresión logística
 - K-Nearest Neighbors
 - K-Means
